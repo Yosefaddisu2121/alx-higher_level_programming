@@ -1,14 +1,11 @@
-#!/usr/bin/python3
 """Module for say_my_name method."""
 
 
 def say_my_name(first_name, last_name=""):
     """Method for printing first and last name.
-
     Args:
         first_name: first name string.
         last_name: last name string.
-
     Raises:
         TypeError: If first_name or last_name are not strings.
     """

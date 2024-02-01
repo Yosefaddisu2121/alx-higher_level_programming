@@ -4,10 +4,8 @@
 
 def print_square(size):
     """Method for printing a square with # characters.
-
     Args:
         size: The int size of the square's side.
-
     Raises:
         TypeError: If size is not an int.
         ValueError: If size is < 0.

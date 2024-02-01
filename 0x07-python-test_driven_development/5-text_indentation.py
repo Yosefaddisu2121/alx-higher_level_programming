@@ -4,10 +4,8 @@
 
 def text_indentation(text):
     """Method for adding 2 new lines after '.?:' chars.
-
     Args:
         text: The str text.
-
     Raises:
         TypeError: If text is not a str.
     """
