@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Module for matrix_divided method."""
-
-
 def matrix_divided(matrix, div):
     """Divides all elements of matrix by div.
     Args:
@@ -35,4 +33,3 @@ def matrix_divided(matrix, div):
 if __name__ == "__main__":
     import doctest
     doctest.testfile("tests/2-matrix_divided.txt")
-
