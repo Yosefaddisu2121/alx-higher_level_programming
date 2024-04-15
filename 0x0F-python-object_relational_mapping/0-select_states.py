@@ -1,24 +1,36 @@
 #!/usr/bin/python3
-"""Module that lists all states from mysql database"""
-import sys
+"""
+Lists all states from the database hbtn_0e_0_usa sorted in ascending order by
+states.id
+"""
 import MySQLdb
-def list_states(username, password, database):
-    # Connect to the MySQL server
-    db = MySQLdb.connect(host='localhost',port=3306, user=username,passwd=password, db=database)
-    cursor = db.cursor()
-    #Execute the SQL query to fetch all states
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    # Fetch all the rows from the quert result.
-    rows = cursor.fetchall()
-    #Print the results
+import sys
+
+
+if __name__ == "__main__":
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    db_name = sys.argv[3]
+
+    try:
+        conn = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=mysql_username,
+            passwd=mysql_password,
+            db=db_name,
+            charset="utf8"
+        )
+    except MySQLdb.Error as e:
+        print("Error connecting to database: {}".format(e))
+        sys.exit(1)
+
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    rows = cur.fetchall()
+
     for row in rows:
         print(row)
-    #clone the database connection
-    db.close()
-#Example usage
-if __name__== '__main__':
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
 
-    list_states(username, password, database)
+    cur.close()
+    conn.close()
