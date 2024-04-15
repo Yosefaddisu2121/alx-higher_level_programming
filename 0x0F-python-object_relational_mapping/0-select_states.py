@@ -2,7 +2,7 @@
 """Module that lists all states from mysql database"""
 import sys
 import MySQLdb
-def list_states(username, password, database);
+def list_states(username, password, database):
     # Connect to the MySQL server
     db = MySQLdb.connect(host='localhost',port=3306, user=username,passwd=password, db=database)
     cursor = db.cursor()
@@ -16,7 +16,7 @@ def list_states(username, password, database);
     #clone the database connection
     db.close()
 #Example usage
-if __name__== '__main__';
+if __name__== '__main__':
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
