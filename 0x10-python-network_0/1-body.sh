@@ -1,7 +1,3 @@
 #!/bin/bash
-# Send a GET request to the URL and display the body of the response for a 200 status code
-response=$(curl -s -w "%{http_code}" -o response_body.txt "$1")
-status_code=$(tail -c 3 <<< "$response")
-if [ "$status_code" -eq 200 ]; then
-    cat response_body.txt
-fi
+# This script sends a DELETE request to the specified URL and displays the response body
+curl -s -X DELETE "$1"
