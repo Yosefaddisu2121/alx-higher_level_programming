@@ -1,7 +1,9 @@
 #!/bin/bash
-# Check if the URL argument is provided
+# Check if URL argument is provided
 if [ -z "$1" ]; then
     echo "Usage: $0 <URL>"
     exit 1
 fi
-curl -X DELETE -s "$1"
+
+# Send a DELETE request to the URL and display the body of the response
+curl -s -X DELETE "$1"
