@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+fetch the program
+"""
 import urllib.request
 import sys
 if __name__ == "__main__":
