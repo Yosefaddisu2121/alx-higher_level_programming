@@ -28,7 +28,7 @@ if __name__ == "__main__":
         print("Usage: python script.py <URL> <email>")
         sys.exit(1)
     
-    url = sys.argv.get(1)
-    email = sys.argv.get(2)
+    url = sys.argv[1]
+    email = sys.argv[2]
     send_post_request(url, email)
 
