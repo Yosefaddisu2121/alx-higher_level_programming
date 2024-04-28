@@ -2,7 +2,7 @@
 """
 fetch the program
 """
-import urllib.request
+import urllib
 import sys
 if __name__ == "__main__":
     url = sys.argv[1]
