@@ -6,7 +6,7 @@ Sends a request to a URL and displays the body of the response, handling HTTP er
 import urllib.request
 import urllib.error
 import sys
-
+url = f'https://api.github.com/users{Yosefaddisu2121}'
 if __name__ == "__main__":
     url = sys.argv[1]
 
